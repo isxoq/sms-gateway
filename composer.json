@@ -1,0 +1,19 @@
+{
+    "name": "isxoq/smsgateway",
+    "description": "This package includes sms gateways services in Uzbekistan",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Isxoqjon Axmedov",
+            "email": "ahmedov7710@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Isxoq\\SmsGateway\\": "src/"
+        }
+    }
+}
