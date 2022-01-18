@@ -18,6 +18,10 @@ class Notify
     }
 
 
+    /**
+     * Sms yuborish funksiyasi
+     * @return mixed
+     */
     public function sendMessage()
     {
         $data = [
