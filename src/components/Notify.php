@@ -1,12 +1,14 @@
 <?php
 
 namespace Isxoq\SmsGateway\components;
+
 class Notify
 {
 
     public $token;
     public $provider;
     public $data;
+    public $active;
 
     public $endpoint = "https://notify.gov.uz/api/web/rest/send-sms";
 
@@ -15,6 +17,8 @@ class Notify
     {
         $this->token = config("sms_gateway.gateways.notify.token");
         $this->provider = config("sms_gateway.gateways.notify.provider");
+        $this->active = config("sms_gateway.gateways.notify.active");
+
         $this->data = $data;
     }
 
@@ -25,6 +29,10 @@ class Notify
      */
     public function sendMessage()
     {
+        if (!$this->active) {
+            return false;
+        }
+
         $data = [
             "token" => $this->token,
             "provider" => $this->provider,
