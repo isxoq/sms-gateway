@@ -1,5 +1,6 @@
 <?php
 
+namespace Isxoq\SmsGateway\components;
 class Notify
 {
 
